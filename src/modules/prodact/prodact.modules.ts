@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import type { iProdact } from "./prodact.type"
 import Toastify from 'toastify-js'
 import api from "../../../bit/api"
