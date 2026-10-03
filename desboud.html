@@ -37,7 +37,7 @@
 
       <!-- Dashboard -->
       <a
-        href="#"
+        href=""
         class="rounded-lg px-5 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-[#F0A500] hover:text-white"
       >
         Dashboard
@@ -79,170 +79,71 @@
 
 
 
-<main class="flex-1">
-<section class="min-h-screen bg-gray-50 px-5 py-12">
-  <div class="mx-auto max-w-2xl">
-
-    <!-- Form Card -->
-    <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-
-      <!-- Heading -->
-      <div class="mb-8">
-        <p class="text-sm font-semibold uppercase tracking-[3px] text-[#F0A500]">
-          Dashboard
-        </p>
-
-        <h2 class="mt-2 text-3xl font-bold text-gray-900">
-          Add New Product
-        </h2>
-
-        <p class="mt-2 text-sm text-gray-500">
-          Add a new food product to your restaurant menu.
-        </p>
-      </div>
+  <main class="flex-1">
 
 
-      <!-- Form -->
-      <form>
+<div class="mx-auto max-w-6xl p-6">
 
-        <!-- Product Name -->
-        <div class="mb-5">
-          <label
-            for="product_name"
-            class="mb-2 block text-sm font-semibold text-gray-700"
-          >
-            Product Name
-          </label>
+  <div class="mb-6">
+    <h1 class="text-2xl font-bold text-gray-800">
+      Product List
+    </h1>
 
-          <input
-            id="product_name"
-            type="text"
-            name="product_name"
-            placeholder="Enter product name"
-            class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
-          />
-        </div>
-
-
-        <!-- Image Select -->
-        <div class="mb-5">
-          <label
-            for="image"
-            class="mb-2 block text-sm font-semibold text-gray-700"
-          >
-            Product Image
-          </label>
-
-          <select
-            id="image"
-            name="image"
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
-          >
-            <option value="">Select an image</option>
-
-            <option value="Chicken_Burger.jpg">
-              Chicken Burger
-            </option>
-
-            <option value="Chicken_Cheese_Pizza.jpg">
-              Chicken Cheese Pizza
-            </option>
-
-            <option value="Chicken_Fry.jpg">
-              Chicken Fry
-            </option>
-
-            <option value="Chicken_Sandwich.jpg">
-              Chicken Sandwich
-            </option>
-
-            <option value="Fry_Nurger.jpg">
-              Fry Nurger
-            </option>
-
-            <option value="Grill_Chicken.jpg">
-              Grill Chicken
-            </option>
-
-            <option value="Pasta.jpg">
-              Pasta
-            </option>
-
-            <option value="Seekh_Kebab.jpg">
-              Seekh Kebab
-            </option>
-          </select>
-        </div>
-
-
-        <!-- Price -->
-        <div class="mb-5">
-          <label
-            for="price"
-            class="mb-2 block text-sm font-semibold text-gray-700"
-          >
-            Price
-          </label>
-
-          <div class="relative">
-            <span
-              class="absolute left-4 top-1/2 -translate-y-1/2 font-semibold text-gray-500"
-            >
-              $
-            </span>
-
-            <input
-              id="price"
-              type="number"
-              name="price"
-              placeholder="Enter price"
-              min="0"
-              step="0.01"
-              class="w-full rounded-lg border border-gray-300 px-4 py-3 pl-9 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
-            />
-          </div>
-        </div>
-
-
-        <!-- Rating -->
-        <div class="mb-7">
-          <label
-            for="ratting"
-            class="mb-2 block text-sm font-semibold text-gray-700"
-          >
-            Rating
-          </label>
-
-          <select
-            id="ratting"
-            name="ratting"
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
-          >
-            <option value="">Select rating</option>
-            <option value="1">⭐ 1 Star</option>
-            <option value="2">⭐⭐ 2 Stars</option>
-            <option value="3">⭐⭐⭐ 3 Stars</option>
-            <option value="4">⭐⭐⭐⭐ 4 Stars</option>
-            <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
-          </select>
-        </div>
-
-
-        <!-- Submit Button -->
-        <button
-          type="submit"
-          class="w-full rounded-lg bg-[#F0A500] px-5 py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000] active:scale-[0.98]"
-        >
-          Add Product
-        </button>
-
-      </form>
-
-    </div>
+    <p class="text-gray-500">
+      Manage your restaurant products
+    </p>
   </div>
-</section>
-</main>
 
+  <div class="overflow-x-auto rounded-xl bg-white shadow-md">
+    
+<div class="w-full overflow-x-auto rounded-lg border border-gray-200">
+  <table class="w-full min-w-[700px] text-left text-sm">
+    
+    <!-- Table Head -->
+    <thead class="bg-gray-100 text-gray-700">
+      <tr>
+        <th class="px-6 py-4 font-semibold">SL</th>
+        <th class="px-6 py-4 font-semibold">Image</th>
+        <th class="px-6 py-4 font-semibold">Title</th>
+        <th class="px-6 py-4 font-semibold">Price</th>
+        <th class="px-6 py-4 font-semibold">Rating</th>
+        <th class="px-6 py-4 font-semibold">Action</th>
+      </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody id="table-body" class="divide-y divide-gray-200">
+
+      <!-- Product 1 -->
+      
+
+      
+    </tbody>
+  </table>
+</div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- creat btn -->
+
+<div class="flex justify-center mb-[20px]">
+<a href="/creat-produ.html"
+  class="rounded-lg bg-[#100b01] px-6 py-3 font-semibold text-white shadow-md transition duration-200 hover:bg-[#d99100] hover:shadow-lg"
+>
+  + Create Product
+</a>
+</div>
+
+
+
+        
+    </main>
 
 
 <footer class="bg-gray-950 text-white">

@@ -1,0 +1,33 @@
+{
+  "prodact": [
+    {
+      "name": "pestopppo",
+      "price": "235.03",
+      "ratting": "3",
+      "image": "Chicken_Cheese_Pizza.jpg",
+      "id": "DpdpNa8niTI"
+    },
+    {
+      "name": "Otto Mccoy",
+      "price": "463",
+      "ratting": "5",
+      "image": "Grill_Chicken.jpg",
+      "id": "-w_PknVmAWo"
+    },
+    {
+      "name": "Kathleen Bradford",
+      "price": "497",
+      "ratting": "4",
+      "image": "Chicken_Cheese_Pizza.jpg",
+      "id": "FywsfWiq2OM"
+    },
+    {
+      "name": "Arden Blackwell",
+      "price": "162",
+      "ratting": "1",
+      "image": "Chicken_Fry.jpg",
+      "id": "-8DucPOkw4s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

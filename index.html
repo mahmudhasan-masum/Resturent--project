@@ -43,9 +43,10 @@
       </a>
 
       <!-- Cart -->
-      <button
+      <button 
+     
         type="button"
-        class="relative ml-2 flex h-11 w-11 items-center justify-center rounded-full bg-[#F0A500] text-white transition hover:bg-[#d99000]"
+        class="relative cart-toggle ml-2 flex h-11 w-11 items-center justify-center rounded-full bg-[#F0A500] text-white transition hover:bg-[#d99000]"
         aria-label="Shopping Cart"
       >
         <!-- Cart Icon -->
@@ -65,7 +66,7 @@
         </svg>
 
         <!-- Cart Count -->
-        <span
+        <span id="cart-total-count"
           class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white"
         >
           0
@@ -76,6 +77,54 @@
   </div>
 </header>
 
+<div id="cart-section"
+ class="bg-[#E6E6FF] hidden fixed top-0 left-0 w-full h-screen  z-99">
+
+
+  <button class="absolute cart-toggle top-5 right-5 text-black text-3xl font-bold z-99">
+    x
+  </button>
+
+  <div class=" mt-[50px]  min-h-screen p-5">
+
+  <div class="max-w-6xl mx-auto border rounded-xl shadow-sm overflow-hidden">
+
+    <!-- Header -->
+    <div class="px-6 py-5 border-b border-black">
+  <h1 class="text-2xl font-semibold text-gray-800">Order Cart</h1>
+</div>
+
+
+
+<div id="cart-content" class="max-h-[50vh] overflow-y-auto"></div>
+
+    <!-- Cart Item 1 -->
+   
+
+
+    
+
+    <!-- Subtotal -->
+    <div class="px-6 py-5 flex justify-end items-center gap-8">
+
+      <span class="text-sm font-medium text-black">
+        Subtotal
+      </span>
+
+      <span id="subtotal"
+       class="text-lg font-bold text-gray-800">
+        $90.00
+      </span>
+      <button id="clear-cart" class="m-5 rounded bg-black px-4 py-2 text-white">Clear Cart</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+</div>
 
    
 
@@ -177,379 +226,12 @@
 
 
     <!-- Products Grid -->
-    <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
+    <div id="product-grid" class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
 
 
       <!-- ================= Product 01 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
+     
 
-        <!-- Product Image -->
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Chicken_Burger.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <!-- Product Content -->
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Chicken Burger
-          </h3>
-
-          <!-- Rating & Price -->
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-gray-300">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $12.00
-            </p>
-
-          </div>
-
-          <!-- Add To Cart -->
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 02 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Chicken_Cheese_Pizza.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Chicken Cheese Pizza
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $15.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 03 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Chicken_Fry.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Chicken Fry
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-gray-300">★</span>
-              <span class="text-gray-300">★</span>
-              <span class="text-gray-300">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $32.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 04 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Chicken_Sandwich.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Chicken Sandwich
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $7.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 05 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Fry_Nurger.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Fry Nurger
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $10.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 06 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Grill_Chicken.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Grill Chicken
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $3.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 07 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Pasta.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Pasta
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-gray-300">★</span>
-              <span class="text-gray-300">★</span>
-              <span class="text-gray-300">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $44.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- ================= Product 08 ================= -->
-      <div
-        class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      >
-
-        <div class="h-64 overflow-hidden">
-          <img
-            src="./src/assets/image/fode/Seekh_Kebab.jpg"
-            alt="this is alt text"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        <div class="p-6">
-
-          <h3 class="text-xl font-semibold text-gray-900">
-            Seekh Kebab
-          </h3>
-
-          <div class="mt-5 flex items-center justify-between">
-
-            <div class="flex items-center gap-1 text-xl">
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-              <span class="text-[#F0A500]">★</span>
-            </div>
-
-            <p class="text-xl font-bold text-gray-900">
-              $43.00
-            </p>
-
-          </div>
-
-          <button
-            type="button"
-            class="mt-6 w-full rounded-xl bg-[#F0A500] py-3.5 font-semibold text-white transition duration-300 hover:bg-[#d99000]"
-          >
-            Add to Cart
-          </button>
-
-        </div>
-      </div>
 
     </div>
   </div>
